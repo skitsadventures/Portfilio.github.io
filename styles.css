@@ -1,300 +1,356 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    /* Reset and Base Styles */
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-  
-      html,
-      body {
-        height: 100%;
-        font-family: Arial, sans-serif;
-      }
-  
-      body {
-        display: flex;
-        flex-direction: column;
-      }
-  
-      /* /////////////////////////////////  HEADER INFO   ///////////////////////////////////////////////// */
-      .toolbar {
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 120px;
-        display: flex;
-        align-items: center;
-        background-color: #424242;
-        color: #000;
-        font-weight: 600;
-        position: sticky;
-        z-index: 1000;
-        padding: 0 20px;
-      }
-  
-      .toolbar img {
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
-      }
-  
-      .toolbar .nav-links {
-        display: flex;
-        gap: 20px;
-        margin-left: auto;
-      }
-  
-      .toolbar .nav-links a {
-        margin: 50px;
-        text-decoration: none;
-        color: inherit;
-      }
-  
-      /* /////////////////////////////////  HOME INFO   ///////////////////////////////////////////////// */
-      #container {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        min-height: 0; /* Prevents flex items from overflowing */
-      }
-  
-      .content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-  
-      .HomeBG {
-        background: linear-gradient(to right, #011816, #02a58d);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 40px 20px;
-        flex: 1;
-        width: 100%;
-      }
-  
-      .HomeCleanBackground {
-        background-color: #92def2;
-        padding: 20px;
-        text-align: center;
-      }
-  
-      .HomeImage {
-        margin: 6px;
-        border-radius: 10px;
-        width: 100%;
-        height: auto;
-        max-height: 100%;
-        object-fit: cover;
-      }
-  
-      .HColumn {
-        text-align: left;
-        padding-right: 5%;
-        flex: 1 1 40%;
-        padding: 20px;
-      }
-  
-      .ImageColumn {
-        padding-left: 20%;
-        flex: 1 1 40%;
-        padding: 20px;
-      }
-  
-      .HColumn h1 {
-        color: #fff;
-        margin-bottom: 10px;
-        font-size: 2.5em;
-      }
-  
-      .HColumn p {
-        color: #fff;
-        font-size: 1.2em;
-        line-height: 1.5;
-      }
-  
-      /* Dialog Section */
-      .HomeCleanBackground button {
-        background: #fff;
-        color: #000;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1em;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s, box-shadow 0.3s;
-      }
-  
-      .HomeCleanBackground button:hover {
-        background: var(--clr, #02a58d);
-        box-shadow: 0 0 10px var(--clr, #02a58d);
-      }
-  
-      .custom-dialog {
-        margin-top: 20px;
-        padding: 20px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        display: none;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-  
-      .custom-dialog p {
-        margin-bottom: 10px;
-        font-size: 1em;
-      }
-  
-      .custom-dialog button {
-        background: #02a58d;
-        color: #fff;
-        border: none;
-        padding: 8px 16px;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-  
-      .custom-dialog button:hover {
-        background: #028f75;
-      }
-  
-      /* /////////////////////////////////  FOOTER INFO   ///////////////////////////////////////////////// */
-      .footer {
-    display: flex;
-    align-items: center;
-    background-color: #343434;
-    text-align: center;
-    height: 70px;
-    padding: 10px;
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* /////////////////////////////////  HEADER INFO   ///////////////////////////////////////////////// */
+.toolbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  background-color: #424242;
+  color: #000;
+  font-weight: 600;
+  position: sticky;
+  z-index: 1000;
+  padding: 0 20px;
+}
+
+.toolbar img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.toolbar .nav-links {
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+}
+
+.toolbar .nav-links a {
+  margin: 50px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* /////////////////////////////////  HOME INFO   ///////////////////////////////////////////////// */
+#container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* Prevents flex items from overflowing */
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.HomeBG {
+  background: linear-gradient(to right, #011816, #02a58d);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: right;
+  padding: 40px 20px;
+  flex: 1;
+  width: 100%;
+}
+
+.HomeCleanBackground {
+  background-color: #92def2;
+  padding: 20px;
+  text-align: center;
+}
+
+.HomeImage {
+  margin: 6px;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.HColumn {
+  text-align: left;
+  padding-right: 5%;
+  flex: 1 1 40%;
+  padding: 20px;
+}
+
+.ImageColumn {
+  padding-left: 20%;
+  flex: 1 1 40%;
+  padding: 20px;
+}
+
+.HColumn h1 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+.HColumn p {
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+/* Dialog Section */
+.HomeCleanBackground button {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.HomeCleanBackground button:hover {
+  background: var(--clr, #02a58d);
+  box-shadow: 0 0 10px var(--clr, #02a58d);
+}
+
+.custom-dialog {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-dialog p {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.custom-dialog button {
+  background: #02a58d;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.custom-dialog button:hover {
+  background: #028f75;
+}
+
+/* /////////////////////////////////  FOOTER INFO   ///////////////////////////////////////////////// */
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: #343434;
+  text-align: center;
+  height: 70px;
+  padding: 10px;
+}
+
+.footer a {
+  color: #000000;
+  margin-right: 20px;
+}
+
+.footer a:hover {
+  color: #02a58d;
+}
+
+/* /////////////////////////////////  INPUT INFO   ///////////////////////////////////////////////// */
+
+/* Glowing buttons */
+
+a {
+  position: relative;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 10px 30px;
+  transition: 0.5s;
+}
+
+a:hover {
+  background: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+  letter-spacing: 0.25em;   
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .HColumn h1 {
+      font-size: 2em;
   }
-  
+
+  .HColumn p {
+      font-size: 1.1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .HomeBG {
+      flex-direction: column;
+      padding: 20px 10px;
+  }
+
+  .ImageColumn,
+  .HColumn {
+      flex: 1 1 100%;
+      padding: 10px;
+      text-align: center;
+  }
+
+  .HColumn {
+      padding-right: 0;
+  }
+
+  .HColumn h1 {
+      font-size: 2em;
+  }
+
+  .HColumn p {
+      font-size: 1em;
+      padding-right: 0;
+  }
+
+  .toolbar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+  }
+
+  .toolbar img {
+      height: 80px;
+      width: 80px;
+      margin-bottom: 10px;
+  }
+
+  .toolbar .nav-links {
+      flex-direction: row;
+      gap: 10px;
+  }
+
+  .toolbar .nav-links a {
+      margin: 0;
+      padding: 10px 15px;
+      width: 100%;
+      text-align: right;
+  }
+
+  .footer {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .HColumn h1 {
+      font-size: 1.5em;
+  }
+
+  .HColumn p {
+      font-size: 0.9em;
+  }
+
   .footer a {
-    color: #000000;
-    margin-right: 20px;
+      font-size: 1.2em;
   }
-  
-  
-      .footer a:hover {
-        color: #02a58d;
-  
-      }
-  
-      /* /////////////////////////////////  INPUT INFO   ///////////////////////////////////////////////// */
-  
-  /* Glowing buttons */
-  
-  a {
-    position: relative;
-    background: #fff;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    padding: 10px 30px;
-    transition: 0.5s;
+
+  .toolbar img {
+      height: 60px;
+      width: 60px;
   }
-  
-  a:hover {
-    background: var(--clr);
-    box-shadow: 0 0 35px var(--clr);
-    letter-spacing: 0.25em;   
+
+  .toolbar .nav-links a {
+      font-size: 0.9em;
   }
-  
-      /* Responsive Styles */
-      @media (max-width: 1024px) {
-        .HColumn h1 {
-          font-size: 2em;
-        }
-  
-        .HColumn p {
-          font-size: 1.1em;
-        }
-      }
-  
-      @media (max-width: 768px) {
-        .HomeBG {
-          flex-direction: column;
-          padding: 20px 10px;
-        }
-  
-        .ImageColumn,
-        .HColumn {
-          flex: 1 1 100%;
-          padding: 10px;
-          text-align: center;
-        }
-  
-        .HColumn {
-          padding-right: 0;
-        }
-  
-        .HColumn h1 {
-          font-size: 2em;
-        }
-  
-        .HColumn p {
-          font-size: 1em;
-          padding-right: 0;
-        }
-  
-        .toolbar {
-          flex-direction: column;
-          height: auto;
-          padding: 10px;
-        }
-  
-        .toolbar img {
-          height: 80px;
-          width: 80px;
-          margin-bottom: 10px;
-        }
-  
-        .toolbar .nav-links {
-          flex-direction: column;
-          gap: 10px;
-        }
-  
-        .toolbar .nav-links a {
-          margin: 0;
-          padding: 10px 15px;
-          width: 100%;
-          text-align: center;
-        }
-  
-        .footer {
-          flex-direction: column;
-          gap: 10px;
-        }
-      }
-  
-      @media (max-width: 480px) {
-        .HColumn h1 {
-          font-size: 1.5em;
-        }
-  
-        .HColumn p {
-          font-size: 0.9em;
-        }
-  
-        .footer a {
-          font-size: 1.2em;
-        }
-  
-        .toolbar img {
-          height: 60px;
-          width: 60px;
-        }
-  
-        .toolbar .nav-links a {
-          font-size: 0.9em;
-        }
-      }
-  
+}
+
+/* /////////////////////////////////   Resume INFO   ///////////////////////////////////////////////// */
+.RBody {
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  background: linear-gradient(120deg, #abdeff, #c8c8c8);
+}
+
+.PLColumn {
+  margin: 6px;  
+  background-color: #cccccc;
+}
+
+.PLImage {
+  margin: 6px; 
+  height: 190px; 
+  border: dimgrey; 
+  border-radius: 10px;
+}
+
+.PContent {
+  text-align: left;
+  font-size: medium;
+  font-weight: normal;
+}
+
+.PInfo {
+  margin-left: 40px;
+  text-align: center;
+}
+
+.PGreyHeading {
+  font-weight: bold;
+  text-align: left;
+  margin: 10%;
+}
+
+.UL {
+  padding-left: 10%;
+}
+
+.PHeading {
+  font-weight: bold;
+  text-align: left;
+}
+
+.PInternship {
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background: linear-gradient(60deg, #abdeff, #c8c8c8 );
+}
+
+.Test {
+  flex-direction: column;
+}
+
