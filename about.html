@@ -12,126 +12,22 @@
   <link href="styles.css" rel="stylesheet">
 
   <style>
-    /* /////////////////////////////////   About INFO   ///////////////////////////////////////////////// */
-
-.AImageSections {
-  background: linear-gradient(to right, #011816, #02a59d);
-  display: flex;
-}
-
-.About {
-  background: linear-gradient(to right, #011816, #02a59d);
-}
-
-.AImageInfo {
-  margin-left: 6%;
-}
-
-.box img {
-  max-width: 100%;
-  max-height: 100%;
-  z-index: 1;
-}
-
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  margin-left: 6%;
-  margin-top: 8px;
-  position: relative;
-  width: 400px;
-  height: 340px;
-  background: repeating-conic-gradient(from var(--a), #92def2 0%, #92def2 5%, transparent 5%, transparent 20%, #92def2 50%);
-  animation: animate 4s linear infinite;
-}
-
-@property --a {
-  syntax: '<angle>';
-  inherits: false;
-  initial-value: 0deg;
-}
-
-@keyframes animate {
-  0% {
-      --a: 0deg;
-  }
-  100% {
-      --a: 360deg;
-  }
-}
-
-.box::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: repeating-conic-gradient(from var(--a), #92def2 0%, #92def2 5%, transparent 5%, transparent 20%, #92def2 50%);
-  animation: animate 4s linear infinite;
-  animation-delay: -1s;
-  z-index: 0;
-}
-    
-    /* This style is to let the footer links stay to the right */
-    .spacer {
-      flex: 1;
-    }
-
-
-     /* /////////////////////////////////  HEADER INFO   ///////////////////////////////////////////////// */
-     .toolbar {
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 120px;
-      display: flex;
-      align-items: center;
-      background-color: #424242;
-      color: #000;
-      font-weight: 600;
-      position: sticky;
-      z-index: 1000;
-      padding: 0 20px;
-    }
-
-    .toolbar img {
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
-    }
-
-    .toolbar .nav-links {
-      display: flex;
-      gap: 20px;
-      margin-left: auto;
-    }
-
-    .toolbar .nav-links a {
-      margin: 50px;
-      text-decoration: none;
-      color: inherit;
-    }
-
     
   </style>
 </head> 
 
 
-<div class="wrapper">
-
-<!-- Header with navigation links -->
-<div class="toolbar">
-  <img style="display: flex; flex-direction: left;" width="40" alt="Profile Image" src="assets/profile.jpg">
-  <div class="nav-links">
+<body>
+  <div class="toolbar">
+    <!-- <img width="40" alt="Profile Image" src="assets/profile.jpg"> -->
     <div class="spacer"></div>
-    <a href="index.html" style="--clr:#00f451;">Home</a>
-    <a href="about.html" style="--clr:#ff00f7;">About</a>
-    <a href="resume.html" style="--clr:#1e9bff;">Resume</a>
+    <div class="nav-links">
+      <a href="index.html" style="--clr:#00f451;">Home</a>
+      <a href="about.html" style="--clr:#ff00f7;">About</a>
+      <a href="resume.html" style="--clr:#1e9bff;">Resume</a>
+    </div>
   </div>
 </div>
-
-<body>
   <div id="container">
     <div class="content">
       <div class="About">
@@ -143,7 +39,7 @@
       <!-- This is where the images with the borders are contained -->
       <div class="AImageSections">
         <div class="box">
-          <img src="favicon.ico" style="height: 95%; width: 95%;">
+          <img src="assets/favicon.ico" style="height: 95%; width: 95%;">
         </div>
         <div>
           <h1 class="AImageInfo" style=" color: #ffffff;">Mushroom</h1>
@@ -153,7 +49,7 @@
 
       <div class="AImageSections">
         <div class="box">
-          <img src="../assets/images/water.jpeg" style="height: 95%; width: 95%;">
+          <img src="assets/water.jpeg" style="height: 95%; width: 95%;">
         </div>
         <div>
           <h1 class="AImageInfo" style=" color: #ffffff;">Ocean</h1>
@@ -164,7 +60,7 @@
 
       <div class="AImageSections">
         <div class="box">
-          <img src="../assets/images/untitled.jpeg" style="height: 95%; width: 95%;">
+          <img src="assets/untitled.jpeg" style="height: 95%; width: 95%;">
         </div>
         <div>
           <h1 class="AImageInfo" style=" color: #ffffff;">Building Complex</h1>
@@ -174,7 +70,7 @@
 
       <div class="AImageSections">
         <div class="box">
-          <img src="../assets/images/sunset.jpeg" style="height: 95%; width: 95%;">
+          <img src="assets/sunset.jpeg" style="height: 95%; width: 95%;">
         </div>
         <div>
           <h1 class="AImageInfo" style=" color: #ffffff;">Sunset</h1>
@@ -184,7 +80,7 @@
 
       <div class="AImageSections">
         <div class="box">
-          <img src="../assets/images/portal.jpg" style="height: 95%; width: 95%;">
+          <img src="assets/portal.jpg" style="height: 95%; width: 95%;">
         </div>
         <div>
           <h1 class="AImageInfo" style=" color: #ffffff;">Portal</h1>
@@ -194,7 +90,7 @@
 
       <div class="AImageSections">
         <div class="box">
-          <img src="../assets/images/oceanGif.gif" style="height: 95%; width: 95%;">
+          <img src="assets/oceanGif.gif" style="height: 95%; width: 95%;">
         </div>
         <div>
           <h1 class="AImageInfo" style=" color: #ffffff;">Ocean</h1>
@@ -203,20 +99,16 @@
       </div>
 
       <!-- This is for the panel that shows the images -->
-      <marquee class="marq" bgcolor="#555" direction="right" loop="-1" white-space="nowrap">
-        <div style="margin: center; width: 260px; height: 200px;">
-          <div style="margin: auto; width: fit-content; height: fit-content; background-color: beige;">
-            <span>
-              <img src="favicon.ico" style="margin: 6px; height: 190px;">
-              <img src="assets/water.jpeg" style="margin: 6px; height: 190px;">
-              <img src="assets/untitled.jpeg" style="margin: 6px; height: 190px;">
-              <img src="assets/sunset.jpeg" style="margin: 6px; height: 190px;">
-              <img src="assets/portal.jpg" style="margin: 6px; height: 190px;">  
-              <img src="assets/oceanGif.gif" style="margin: 6px; height: 190px;"> 
-            </span>          
-          </div>
+      <div class="image-carousel" style="background-color: #FFD700  ;">
+        <div class="carousel-track">
+          <img src="assets/favicon.ico" alt="Mushroom">
+          <img src="assets/water.jpeg" alt="Ocean">
+          <img src="assets/untitled.jpeg" alt="Building Complex">
+          <img src="assets/sunset.jpeg" alt="Sunset">
+          <img src="assets/portal.jpg" alt="Portal">  
+          <img src="assets/oceanGif.gif" alt="Ocean GIF"> 
         </div>
-      </marquee>
+      </div>
     </div>
     <!-- Footer Section -->
     <div class="footer">
@@ -227,6 +119,5 @@
       <a href="#" style="--clr:#fff;"><i class="fa-brands fa-google" style="color: black;"></i></a>
     </div>
   </div>
-</div> <!-- End of wrapper -->
 </body>
 </html>

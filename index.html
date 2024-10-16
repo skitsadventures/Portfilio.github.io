@@ -12,21 +12,23 @@
 </head>
 
 <body>
-  <!-- Wrapper that holds the entire content and footer -->
-  <div class="wrapper">
-
     <!-- Header with navigation links -->
-    <div class="toolbar">
-      <img style="display: flex; flex-direction: left;" width="40" alt="Profile Image" src="assets/profile.jpg">
-      <div class="nav-links">
-        <div class="spacer"></div>
-        <a href="index.html" style="--clr:#00f451;">Home</a>
-        <a href="about.html" style="--clr:#ff00f7;">About</a>
-        <a href="resume.html" style="--clr:#1e9bff;">Resume</a>
+    <div class="HeaderColumn">
+      <div class="toolbar">
+        <div class="HeaderImage">
+          <img style="display: flex; flex-direction: left;" width="40" alt="Profile Image" src="assets/profile.jpg">
+        </div>
+        <div class="nav-links">
+          <div class="spacer"></div>
+          <a href="index.html" style="--clr:#00f451;">Home</a>
+          <a href="about.html" style="--clr:#ff00f7;">About</a>
+          <a href="resume.html" style="--clr:#1e9bff;">Resume</a>
+        </div>
       </div>
     </div>
 
-    <div id="container">
+    <!-- Content Section -->
+    <div id="HeaderColumn">
       <div class="content">
         <!-- Home Section -->
         <div class="HomeBG">
@@ -66,7 +68,7 @@
       <a href="#" style="--clr:#fff;"><i class="fa-brands fa-google" style="color: black;"></i></a>
     </div>
 
-  </div> <!-- End of wrapper -->
+  <!-- y</div> <!-- End of wrapper -->
 
   <script>
     function toggleDialog() {
