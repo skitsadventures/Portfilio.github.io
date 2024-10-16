@@ -435,8 +435,8 @@ a:hover {
 }
 
 .PLImage {
-  margin: 6px; 
-  height: 190px; 
+  margin: 1em; 
+  height: 30em; 
   border: dimgrey; 
   border-radius: 10px;
 }
