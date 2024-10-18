@@ -28,7 +28,7 @@ indexColumn {
   width: 100%;
   
   align-items: center;
-  background-color: #424242;
+  background: linear-gradient(to right, #425453, #9df5f0);
   color: #000;
   font-weight: 600;
   position: sticky;
@@ -160,13 +160,14 @@ indexColumn {
 .custom-dialog {
   margin-top: 20px;
   padding: 20px;
-  background: #fff;
+  background: linear-gradient(120deg, #abdeff, #c8c8c8);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: none;
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2em;
 }
 
 .custom-dialog p {
@@ -221,14 +222,15 @@ indexColumn {
 /* /////////////////////////////////  FOOTER INFO   ///////////////////////////////////////////////// */
 .footer {
   display: flex;
-  align-items: center;
+  align-items: right;
   background-color: #343434;
-  text-align: center;
+  text-align: right;
   height: 70px;
   padding: 10px;
 }
 
 .footer a {
+  align-items: right;
   color: #000000;
   margin-right: 20px;
 }
@@ -362,6 +364,9 @@ a:hover {
 
 .About {
   background: linear-gradient(to right, #011816, #02a59d);
+  text-align: center;
+  width: 100%;
+  font-size: 2em;
 }
 
 .AImageInfo {
@@ -423,22 +428,37 @@ a:hover {
 /* /////////////////////////////////   Resume INFO   ///////////////////////////////////////////////// */
 
 .RBody {
-  
   display: flex;
   background: linear-gradient(120deg, #abdeff, #c8c8c8);
 }
 
 .PLColumn {
+  display: flex;         /* Makes the div a Flexbox container */
+  flex-direction: column; /* Align items in a column layout */
   width: 60%;
   margin: 6px;  
+  align-items: center;    /* Center items horizontally */
   background-color: #cccccc;
+  padding: 20px;          /* Add padding for inner spacing */
+}
+
+.PLImageBorder {
+  background-color: #028f75;
+  text-align: center;
+  margin-top: 2em;
+  height: 32em; 
+  width: 16em;
+  border-radius: 2em;
+  display: flex;          /* Flexbox for centering image inside */
+  justify-content: center;/* Horizontally center image */
+  align-items: center;    /* Vertically center image */
 }
 
 .PLImage {
-  margin: 1em; 
+  margin-top: 1em; 
   height: 30em; 
   border: dimgrey; 
-  border-radius: 10px;
+  border-radius: 1em;
 }
 
 .PContent {
@@ -449,7 +469,6 @@ a:hover {
 
 .PInfo {
   margin-left: 4em;
-  text-align: center;
 }
 
 .PGreyHeading {
