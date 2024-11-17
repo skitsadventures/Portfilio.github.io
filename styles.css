@@ -456,15 +456,15 @@ a:hover {
 
 
 .PLColumn {
-    display: flex; /* Flexbox for column layout inside PLColumn */
-    flex-direction: column; /* Keep items arranged in a column */
-    width: auto; /* Allow width to adjust based on content */
-    margin: 6px;
-    align-items: center; /* Center the items horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    margin: 0;
+    padding: 20px;
     background-color: #cccccc;
-    padding: 20px; /* Padding inside PLColumn */
-    flex-shrink: 0; /* Prevent PLColumn from shrinking */
 }
+
 .PLImageBorder {
   background-color: #028f75;
   text-align: center;
@@ -485,19 +485,26 @@ a:hover {
 }
 
 .PContent {
-    text-align: left; /* Align text to the left */
-    font-size: medium; /* Default font size */
-    font-weight: normal; /* Normal font weight */
-    line-height: 1.5; /* Line spacing for readability */
-    word-wrap: break-word; /* Ensure long words wrap to the next line if necessary */
-    overflow-wrap: break-word; /* Support word wrapping for long words */
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
 }
+    .PContent p {
+        margin-bottom: 1rem; /* Space between paragraphs */
+    }
+
+    .PContent hr {
+        margin-top: 2rem; /* Add space above the horizontal rule */
+        border: 0;
+        border-top: 1px solid #ccc; /* Make the horizontal rule lighter */
+    }
 
 .PInfo {
-    margin-left: 2em; /* Add space between PLColumn and PInfo */
-    flex-shrink: 0; /* Prevent PInfo from shrinking */
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+    width: auto;
 }
 
 .PGreyHeading {
@@ -519,11 +526,10 @@ a:hover {
 .PInternship {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    gap: 10px; /* Space between elements */
     background: linear-gradient(60deg, #abdeff, #c8c8c8);
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: visible; /* Allow content to overflow */
+    min-height: 100vh; /* Ensures background covers full height */
+    padding: 20px; /* Optional padding for content spacing */
 }
 
 .Test {
@@ -544,11 +550,12 @@ a:hover {
     }
 
     .PContent {
-        font-size: small; /* Adjust font size for smaller screens */
-        padding: 10px; /* Optional: Add padding for mobile */
+        font-size: 0.9rem; /* Slightly reduce font size for smaller screens */
+
+        max-width: 100%; /* Ensure the content takes full width on small screens */
     }
     .PInternship {
-        padding: 15px; /* Reduce padding for smaller screens */
+         /* Reduce padding for smaller screens */
         background: linear-gradient(45deg, #abdeff, #c8c8c8); /* Adjust gradient for mobile */
     }
     .PHeading {
