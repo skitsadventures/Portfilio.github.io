@@ -242,6 +242,7 @@ indexColumn {
 /* This is to put the linkedin and github logos on the right */
 .spacer {   
   flex: 1;
+  flex-basis: 0;
 }
 
 /* /////////////////////////////////  INPUT INFO   ///////////////////////////////////////////////// */
@@ -306,25 +307,36 @@ a:hover {
       padding-right: 0;
   }
 
- 
 
-  .toolbar img {
-      height: 80px;
-      width: 80px;
-      margin-bottom: 10px;
-  }
 
-  .toolbar .nav-links {
-      flex-direction: center;
-      gap: 10px;
-  }
+    .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Ensures space between nav items and image */
+        width: 100%; /* Make the toolbar span the full width of the screen */
+        box-sizing: border-box; /* Include padding and borders in the width calculation */
+        padding: 0 20px; /* Add padding to avoid elements sticking to the screen edges */
+    }
 
-  .toolbar .nav-links a {
-      margin: 0;
-      padding: 15px 15px;
-      width: 100%;
-      text-align: right;
-  }
+        .toolbar img {
+            height: 80px;
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        .toolbar .nav-links {
+            display: flex;
+            flex-direction: row; /* Change this to row for horizontal alignment */
+            gap: 10px;
+        }
+
+            .toolbar .nav-links a {
+                margin: 0;
+                padding: 15px;
+                text-align: center; /* Center text within the link */
+                flex: 1; /* Ensure links grow/shrink proportionally */
+            }
+
 
   .footer {
       flex-direction: column;
