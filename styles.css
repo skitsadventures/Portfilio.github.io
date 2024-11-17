@@ -462,6 +462,7 @@ a:hover {
     width: auto;
     margin: 0;
     padding: 20px;
+    height: 100%;
     background-color: #cccccc;
 }
 
@@ -469,17 +470,17 @@ a:hover {
   background-color: #028f75;
   text-align: center;
   margin-top: 2em;
-  height: 32em; 
-  width: 16em;
-  border-radius: 2em;
+  height: 16em; 
+  width: 8em;
+  border-radius: 1em;
   display: flex;          /* Flexbox for centering image inside */
   justify-content: center;/* Horizontally center image */
   align-items: center;    /* Vertically center image */
 }
 
 .PLImage {
-  margin-top: 1em; 
-  height: 30em; 
+  margin-top: 0em; 
+  height: 15em; 
   border: dimgrey; 
   border-radius: 1em;
 }
@@ -521,6 +522,7 @@ a:hover {
     margin-left: 10%;
     font-weight: bold;
     text-align: left;
+    font-size: 2em;
 }
 
 .PInternship {
