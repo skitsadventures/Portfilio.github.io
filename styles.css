@@ -532,6 +532,7 @@ a:hover {
     background: linear-gradient(60deg, #abdeff, #c8c8c8);
     min-height: 100vh; /* Ensures background covers full height */
     padding: 20px; /* Optional padding for content spacing */
+    height: 100%;
 }
 
 .Test {
