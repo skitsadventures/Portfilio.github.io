@@ -470,8 +470,8 @@ a:hover {
   background-color: #028f75;
   text-align: center;
   margin-top: 2em;
-  height: 16em; 
-  width: 8em;
+  height: 15%; 
+  width: 50%;
   border-radius: 1em;
   display: flex;          /* Flexbox for centering image inside */
   justify-content: center;/* Horizontally center image */
@@ -480,7 +480,8 @@ a:hover {
 
 .PLImage {
   margin-top: 0em; 
-  height: 15em; 
+  width: 90%;
+  height: 90%; 
   border: dimgrey; 
   border-radius: 1em;
 }
@@ -492,7 +493,7 @@ a:hover {
 }
     .PContent p {
         margin-bottom: 1rem;
-        font-size: 1.8em;
+        font-size: 1em;
     }
 
     .PContent hr {
@@ -505,6 +506,7 @@ a:hover {
     margin-left: 0;
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 1em;
     padding: 10px;
     width: 75%;
 }
@@ -512,16 +514,16 @@ a:hover {
 .PGreyHeading {
     font-weight: bold;
     text-align: left;
-    margin: 10%;
+    margin: 5%;
+    font-size: 1em;
 }
 
 .UL {
   padding-left: 10%;
-  font-size: .5em;
+  font-size: 1em;
 }
 
 .PHeading {
-    margin-left: 10%;
     font-weight: bold;
     text-align: left;
     font-size: 2em;
@@ -554,6 +556,25 @@ a:hover {
         margin-top: 10px; /* Add top margin for spacing between elements */
     }
 
+    .PLImageBorder {
+        background-color: #028f75;
+        text-align: center;
+        margin-top: 2em;
+        height: 16em;
+        width: 8em;
+        border-radius: 1em;
+        display: flex; /* Flexbox for centering image inside */
+        justify-content: center; /* Horizontally center image */
+        align-items: center; /* Vertically center image */
+    }
+
+    .PLImage {
+        margin-top: 0em;
+        height: 15em;
+        border: dimgrey;
+        border-radius: 1em;
+    }
+
     .PContent {
         font-size: 0.9rem; /* Slightly reduce font size for smaller screens */
 
@@ -572,12 +593,24 @@ a:hover {
 
     .PInternship {
          /* Reduce padding for smaller screens */
-        background: linear-gradient(45deg, #abdeff, #c8c8c8); /* Adjust gradient for mobile */
+        background: linear-gradient(45deg, #abdeff, #c8c8c8);
+        height: 100%;
     }
     .PHeading {
-        margin-left: 5%; /* Reduce margin on smaller screens */
         font-size: 1.2rem; /* Slightly reduce font size for smaller screens */
     }
+
+    .PGreyHeading {
+        font-weight: bold;
+        text-align: left;
+        margin: 10%;
+    }
+
+    .UL {
+        padding-left: 10%;
+        font-size: .5em;
+    }
+
 }
 
 /* ////////////////////////////// MOBILE DEVICE ////////////////////////////// */
