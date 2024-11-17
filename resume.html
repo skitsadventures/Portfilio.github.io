@@ -2,99 +2,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="styles.css" rel="stylesheet">
 </head>
-<!--<style>
+<style>
   /* /////////////////////////////////   FOOTER INFO   ///////////////////////////////////////////////// */
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    font-family: system-ui;
-    }
-  
-            
-    #container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the container takes the full height of the viewport */
-    }
-  
-    .content {
-    flex: 1; /* Make the content take up all available space */
-    display: flex;
-    flex-direction: column;
-    }
-  
-    /* Footer */
-    .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the footer content */
-    background-color: #343434;
-    text-align: center;
-    height: 70px;
-    padding: 10px;
-    }
-  
-    .footer a {
-    color: #000000;
-    margin-right: 20px;
-    }
-  
-    .custom-dialog {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: opacity 2s ease, transform 2s ease;
-    }
-    
-    dialog[open] {
-      opacity: 1;
-      transform: scale(1);
+
+    html, body {
+        height: 100%; /* Ensure body and html elements take up full height */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        display: flex; /* Use flexbox for the layout */
+        flex-direction: column; /* Stack content vertically */
     }
 
-     /* /////////////////////////////////  HEADER INFO   ///////////////////////////////////////////////// */
-     .toolbar {
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 120px;
-      display: flex;
-      align-items: center;
-      background-color: #424242;
-      color: #000;
-      font-weight: 600;
-      position: sticky;
-      z-index: 1000;
-      padding: 0 20px;
+    body {
+        overflow-y: auto; /* Allow vertical scrolling if content overflows */
     }
 
-    .toolbar img {
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
+    ul, ol {
+        margin-left: 4em;
     }
 
-    .toolbar .nav-links {
-      display: flex;
-      gap: 20px;
-      margin-left: auto;
-    }
-
-    .toolbar .nav-links a {
-      margin: 50px;
-      text-decoration: none;
-      color: inherit;
-    }
-    </style>-->
+        ul li, ol li {
+            list-style-type: disc; /* Ensure items are properly displayed */
+        }
+    </style>
 
 <!-- Header with navigation links -->
 <div class="HeaderColumn">
