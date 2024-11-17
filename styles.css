@@ -459,10 +459,10 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: auto;
-    margin: 0;
+    width: 20%;
+    margin: 10px;
     padding: 10px;
-    height: 100%;
+    height: 98.5%;
     background-color: #cccccc;
 }
 
@@ -491,7 +491,8 @@ a:hover {
     margin: 10px 0;
 }
     .PContent p {
-        margin-bottom: 1rem; /* Space between paragraphs */
+        margin-bottom: 1rem;
+        font-size: 1.8em;
     }
 
     .PContent hr {
@@ -505,13 +506,13 @@ a:hover {
     margin-top: 0;
     margin-bottom: 0;
     padding: 10px;
-    width: auto;
+    width: 75%;
 }
 
 .PGreyHeading {
-  font-weight: bold;
-  text-align: left;
-  margin: 10%;
+    font-weight: bold;
+    text-align: left;
+    margin: 10%;
 }
 
 .UL {
@@ -558,6 +559,17 @@ a:hover {
 
         max-width: 100%; /* Ensure the content takes full width on small screens */
     }
+        .PContent p {
+            margin-bottom: 1rem;
+            font-size: 1.2em;
+        }
+
+        .PContent li {
+            margin-bottom: 0.5rem;
+            font-size: 1em;
+        }
+
+
     .PInternship {
          /* Reduce padding for smaller screens */
         background: linear-gradient(45deg, #abdeff, #c8c8c8); /* Adjust gradient for mobile */
