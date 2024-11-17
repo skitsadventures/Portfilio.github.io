@@ -447,21 +447,24 @@ a:hover {
 
 /* /////////////////////////////////   Resume INFO   ///////////////////////////////////////////////// */
 
-.RBody {
-  display: flex;
-  background: linear-gradient(120deg, #abdeff, #c8c8c8);
+.Rbody {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: space-between; /* Distribute space evenly between items */
+    align-items: flex-start; /* Align items to the top of the container */
+    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
 }
+
 
 .PLColumn {
-  display: flex;         /* Makes the div a Flexbox container */
-  flex-direction: column; /* Align items in a column layout */
-  width: 60%;
-  margin: 6px;  
-  align-items: center;    /* Center items horizontally */
-  background-color: #cccccc;
-  padding: 20px;          /* Add padding for inner spacing */
+    display: flex; /* Flexbox for column layout inside PLColumn */
+    flex-direction: column; /* Keep items arranged in a column */
+    width: auto; /* Allow width to adjust based on content */
+    margin: 6px;
+    align-items: center; /* Center the items horizontally */
+    background-color: #cccccc;
+    padding: 20px; /* Padding inside PLColumn */
+    flex-shrink: 0; /* Prevent PLColumn from shrinking */
 }
-
 .PLImageBorder {
   background-color: #028f75;
   text-align: center;
@@ -482,13 +485,19 @@ a:hover {
 }
 
 .PContent {
-  text-align: left;
-  font-size: medium;
-  font-weight: normal;
+    text-align: left; /* Align text to the left */
+    font-size: medium; /* Default font size */
+    font-weight: normal; /* Normal font weight */
+    line-height: 1.5; /* Line spacing for readability */
+    word-wrap: break-word; /* Ensure long words wrap to the next line if necessary */
+    overflow-wrap: break-word; /* Support word wrapping for long words */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
 }
 
 .PInfo {
-  margin-left: 4em;
+    margin-left: 2em; /* Add space between PLColumn and PInfo */
+    flex-shrink: 0; /* Prevent PInfo from shrinking */
 }
 
 .PGreyHeading {
@@ -517,6 +526,25 @@ a:hover {
 
 .Test {
   flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .Rbody {
+        justify-content: flex-start; /* Ensure they align at the start on small screens */
+    }
+
+    .PLColumn, .PInfo {
+        width: auto; /* Allow both columns to adjust based on content */
+    }
+
+    .PInfo {
+        margin-top: 10px; /* Add top margin for spacing between elements */
+    }
+
+    .PContent {
+        font-size: small; /* Adjust font size for smaller screens */
+        padding: 10px; /* Optional: Add padding for mobile */
+    }
 }
 
 /* ////////////////////////////// MOBILE DEVICE ////////////////////////////// */
