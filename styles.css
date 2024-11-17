@@ -517,11 +517,13 @@ a:hover {
 }
 
 .PInternship {
-  
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: linear-gradient(60deg, #abdeff, #c8c8c8 );
+    display: flex; /* Use flexbox for the container */
+    flex-direction: column; /* Arrange items vertically */
+    width: 100%; /* Take up the full width of the container */
+    background: linear-gradient(60deg, #abdeff, #c8c8c8); /* Background gradient */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    overflow: hidden; /* Prevent overflow */
 }
 
 .Test {
@@ -544,6 +546,10 @@ a:hover {
     .PContent {
         font-size: small; /* Adjust font size for smaller screens */
         padding: 10px; /* Optional: Add padding for mobile */
+    }
+    .PInternship {
+        padding: 15px; /* Reduce padding on smaller screens */
+        background: linear-gradient(45deg, #abdeff, #c8c8c8); /* Adjust gradient angle for mobile */
     }
 }
 
