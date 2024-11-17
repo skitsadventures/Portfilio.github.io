@@ -221,27 +221,47 @@ indexColumn {
 
 /* /////////////////////////////////  FOOTER INFO   ///////////////////////////////////////////////// */
 .footer {
-  display: flex;
-  align-items: right;
-  background-color: #343434;
-  text-align: right;
-  height: 70px;
-  padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: flex-end; /* Ensure links are pushed to the right */
+    background-color: #333; /* Set background color for footer */
+    width: 100%; /* Ensure footer takes up the full width */
+    padding: 10px 20px; /* Optional padding */
+    flex-wrap: wrap; /* Allow wrapping of footer links */
 }
 
-.footer a {
-  align-items: right;
-  color: #000000;
-  margin-right: 20px;
-}
+    .footer a {
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: white; /* Ensure links are visible on dark background */
+    }
 
 .footer a:hover {
   color: #02a58d;
 }
 
 /* This is to put the linkedin and github logos on the right */
-.spacer {   
-  flex: 1;
+.footer .spacer {
+    flex-grow: 1; /* This will make the spacer take up available space */
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start; /* Change this as needed for alignment */
+    }
+
+        .footer a {
+            margin: 1em 0;
+        }
+
+        .footer .spacer {
+            display: none; /* Optionally hide the spacer in the mobile view if it’s unnecessary */
+        }
+
 }
 
 /* /////////////////////////////////  INPUT INFO   ///////////////////////////////////////////////// */
@@ -544,7 +564,7 @@ a:hover {
 
   .footer {
     flex-direction: row;
-    gap: 10px;
+    gap: 5px;
   }
 
   .footer a {
