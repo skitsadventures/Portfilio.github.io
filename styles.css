@@ -502,7 +502,7 @@ a:hover {
 /* ////////////////////////////// MOBILE DEVICE ////////////////////////////// */
 
 /* Mobile Devices */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .toolbar {
     flex-direction: column;
     height: auto;
