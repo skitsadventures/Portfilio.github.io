@@ -594,7 +594,7 @@ a:hover {
     .PInternship {
          /* Reduce padding for smaller screens */
         background: linear-gradient(45deg, #abdeff, #c8c8c8);
-        height: 100%;
+        height: 120%;
     }
     .PHeading {
         font-size: 1.2rem; /* Slightly reduce font size for smaller screens */
