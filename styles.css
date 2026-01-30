@@ -673,3 +673,29 @@ a {
             margin-bottom: 10px;
         }
 }
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:Arial,sans-serif}
+body{width:100%}
+
+.HeaderColumn{background:#424242}
+.toolbar{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to right,#425453,#9df5f0);padding:10px 20px}
+.toolbar img{height:80px;width:80px;border-radius:50%}
+
+.Rbody{display:flex;align-items:flex-start;width:100%;gap:20px;padding:20px}
+.PLColumn{width:22%;background:#ccc;padding:10px}
+.PInfo{width:78%;padding:10px}
+
+.PLImageBorder{background:#028f75;border-radius:1em;display:flex;justify-content:center;align-items:center;margin:20px auto;height:180px}
+.PLImage{width:90%;height:90%;border-radius:1em}
+
+.PHeading{font-weight:bold;font-size:1.6em;margin:10px 0}
+.PContent{line-height:1.6}
+.UL{padding-left:20px}
+
+.PInternship{background:linear-gradient(45deg,#abdeff,#c8c8c8);padding:30px}
+
+@media(max-width:768px){
+.Rbody{flex-direction:column}
+.PLColumn,.PInfo{width:100%}
+.PHeading{font-size:1.2em}
+}
