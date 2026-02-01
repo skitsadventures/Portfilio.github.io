@@ -1,0 +1,326 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/* /////////////////////////////////  HEADER INFO   ///////////////////////////////////////////////// */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: linear-gradient(to right, #425453, #9df5f0);
+    font-weight: 600;
+    padding: 0 20px;
+}
+
+.HeaderColumn {
+    display: flex;
+    background-color: #424242;
+}
+
+.HeaderImage {
+    margin: 6px;
+}
+
+.toolbar img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+/* /////////////////////////////////   Resume INFO   ///////////////////////////////////////////////// */
+
+.Rbody {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+        background: linear-gradient(140deg, #abdeff, #c8c8c8);
+}
+
+.PLColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #cccccc;
+}
+
+.PLImageBorder {
+    background-color: #028f75;
+    margin-top: 2em;
+    height: 15%;
+    width: 50%;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PLImage {
+    width: 90%;
+    height: 90%;
+    border-radius: 1em;
+}
+
+.PInfo {
+    width: 75%;
+    padding: 10px;
+}
+
+.PHeading {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.PGreyHeading {
+    margin: 5%;
+}
+
+.UL {
+    padding-left: 10%;
+}
+
+.PContent {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.PContent hr {
+    margin-top: 2rem;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Internship behaves like a scalable block */
+.PInternship {
+    background: linear-gradient(45deg, #abdeff, #c8c8c8);
+    padding-left: 40px;
+    padding-top: 40px;
+    max-width: 100%;
+    width: 100%;
+  ;
+    box-sizing: border-box;
+}
+
+.hr {
+    width: 30%;
+    margin: 1.5em 0;
+}
+.short-hr {
+    width: 30%;
+}
+
+
+
+/* /////////////////////////////////  FOOTER INFO   ///////////////////////////////////////////////// */
+
+.footer {
+    text-align: right;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #333;
+    width: 100%;
+    flex-direction: row;
+}
+
+.footer a i {
+    font-size: 120%;
+    color: black;
+}
+
+/* /////////////////////////////////  RESPONSIVE   ///////////////////////////////////////////////// */
+
+@media (max-width: 768px) {
+    .Rbody {
+        flex-direction: column;
+        background-color: #333;
+    }
+
+    .PLColumn,
+    .PInfo {
+        width: 100%;
+    }
+
+    .PInternship {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+
+    .footer a i {
+        font-size: 30px;
+    }
+}
+
+.plain-link {
+    color: inherit;        /* same color as text */
+    text-decoration: none; /* no underline */
+    background: none;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.plain-link:hover {
+    text-decoration: underline; /* optional */
+}
+    .toolbar img {
+        height: 80px;
+        width: 80px;
+        margin-bottom: 10px;
+    }
+
+    .toolbar .nav-links {
+        flex-direction: center;
+        gap: 10px;
+    }
+
+        .toolbar .nav-links a {
+            margin: 0;
+            padding: 15px 15px;
+            width: 100%;
+            text-align: right;
+        }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* /////////////////////////////////  INPUT INFO   ///////////////////////////////////////////////// */
+
+/* Glowing buttons */
+
+a {
+    position: relative;
+    background: #fff;
+    min-height: 10px;
+    max-height: 45px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+    a:hover {
+        background: var(--clr);
+        box-shadow: 0 0 35px var(--clr);
+        letter-spacing: 0.25em;
+    }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .HColumn h1 {
+        font-size: 2em;
+    }
+
+    .HColumn p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .HomeBG {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .ImageColumn,
+    .HColumn {
+        flex: 1 1 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .HColumn {
+        padding-right: 0;
+    }
+
+        .HColumn h1 {
+            font-size: 2em;
+        }
+
+        .HColumn p {
+            font-size: 1em;
+            padding-right: 0;
+        }
+
+
+
+    .toolbar img {
+        height: 80px;
+        width: 80px;
+        margin-bottom: 10px;
+    }
+
+    .toolbar .nav-links {
+        flex-direction: center;
+        gap: 10px;
+    }
+
+        .toolbar .nav-links a {
+            margin: 0;
+            padding: 15px 15px;
+            width: 100%;
+            text-align: right;
+        }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .HColumn h1 {
+        font-size: 1.5em;
+    }
+
+    .HColumn p {
+        font-size: 0.9em;
+    }
+
+    .footer a {
+        font-size: 1.2em;
+    }
+
+    .toolbar img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .toolbar .nav-links a {
+        font-size: 0.9em;
+    }
+}
+
