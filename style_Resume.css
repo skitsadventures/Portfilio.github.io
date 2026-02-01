@@ -83,14 +83,12 @@ body {
     flex: 0 1 320px;     /* increase flex-basis from 260px to 320px */
     max-width: 25%;    /* allow it to grow a bit more if space allows */
     min-width: 160px;    /* keep a reasonable minimum */
-    padding: 10px;
+    padding-left: 10px;
     background-color: #cccccc;
     display: flex;
     flex-direction: column;
     align-items: stretch;
 }
-
-
 
 .PLImageBorder {
     background-color: #028f75;
@@ -114,7 +112,7 @@ body {
 .PInfo {
     flex: 1 1 auto; /* takes remaining space and grows */
     width: auto; /* reset width */
-    padding: 10px;
+    padding-left: 10px;
 }
 
 .PHeading {
