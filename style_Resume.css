@@ -9,6 +9,7 @@ html,
 body {
     height: 100%;
     font-family: Arial, sans-serif;
+    width: 100%;
 }
 
 body {
@@ -16,6 +17,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
 /* /////////////////////////////////  HEADER INFO   ///////////////////////////////////////////////// */
 
 .toolbar {
@@ -47,6 +50,18 @@ body {
     border-radius: 50%;
 }
 
+.toolbar .nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.toolbar .nav-links a {
+    margin: 0;
+    padding: 15px 15px;
+    width: auto;
+    text-align: right;
+}
+
 /* /////////////////////////////////   Resume INFO   ///////////////////////////////////////////////// */
 
 .Rbody {
@@ -54,7 +69,9 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: nowrap;
-        background: linear-gradient(140deg, #abdeff, #c8c8c8);
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(140deg, #abdeff, #c8c8c8);
 }
 
 .PLColumn {
@@ -62,7 +79,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 20%;
-    margin: 10px;
+    margin: 0;
     padding: 10px;
     background-color: #cccccc;
 }
@@ -70,18 +87,19 @@ body {
 .PLImageBorder {
     background-color: #028f75;
     margin-top: 2em;
-    height: 15%;
     width: 50%;
     border-radius: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .PLImage {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: auto;
     border-radius: 1em;
+    object-fit: contain;
 }
 
 .PInfo {
@@ -114,26 +132,14 @@ body {
     border-top: 1px solid #ccc;
 }
 
-/* Internship behaves like a scalable block */
 .PInternship {
     background: linear-gradient(45deg, #abdeff, #c8c8c8);
     padding-left: 40px;
     padding-top: 40px;
     max-width: 100%;
     width: 100%;
-  ;
     box-sizing: border-box;
 }
-
-.hr {
-    width: 30%;
-    margin: 1.5em 0;
-}
-.short-hr {
-    width: 30%;
-}
-
-
 
 /* /////////////////////////////////  FOOTER INFO   ///////////////////////////////////////////////// */
 
@@ -153,71 +159,9 @@ body {
     color: black;
 }
 
-/* /////////////////////////////////  RESPONSIVE   ///////////////////////////////////////////////// */
+/* /////////////////////////////////  INPUT INFO   ///////////////////////////////////////////////// */
 
-@media (max-width: 768px) {
-    .Rbody {
-        flex-direction: column;
-        background-color: #333;
-    }
-
-    .PLColumn,
-    .PInfo {
-        width: 100%;
-    }
-
-    .PInternship {
-        padding: 20px;
-        margin: 20px auto;
-    }
-
-    .footer {
-        justify-content: center;
-    }
-
-    .footer a i {
-        font-size: 30px;
-    }
-}
-
-.plain-link {
-    color: inherit;        /* same color as text */
-    text-decoration: none; /* no underline */
-    background: none;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-}
-
-.plain-link:hover {
-    text-decoration: underline; /* optional */
-}
-    .toolbar img {
-        height: 80px;
-        width: 80px;
-        margin-bottom: 10px;
-    }
-
-    .toolbar .nav-links {
-        flex-direction: center;
-        gap: 10px;
-    }
-
-        .toolbar .nav-links a {
-            margin: 0;
-            padding: 15px 15px;
-            width: 100%;
-            text-align: right;
-        }
-
-    .footer {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-   /* /////////////////////////////////  INPUT INFO   ///////////////////////////////////////////////// */
-
-/* Glowing buttons */
+/* GLOWING BUTTONS */
 a {
     position: relative;
     background: #fff;
@@ -239,79 +183,82 @@ a:hover {
     letter-spacing: 0.25em;
 }
 
-/* Responsive Styles */
+/* /////////////////////////////////  RESPONSIVE   ///////////////////////////////////////////////// */
+
 @media (max-width: 1024px) {
-    .HColumn h1 {
-        font-size: 2em;
-    }
-
-    .HColumn p {
-        font-size: 1.1em;
-    }
-}
-
-@media (max-width: 768px) {
-    .HomeBG {
-        flex-direction: column;
-        padding: 20px 10px;
-    }
-
-    .ImageColumn,
-    .HColumn {
-        flex: 1 1 100%;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .HColumn {
-        padding-right: 0;
-    }
-
-    .HColumn h1 {
-        font-size: 2em;
-    }
-
-    .HColumn p {
-        font-size: 1em;
-        padding-right: 0;
-    }
-
     .toolbar img {
         height: 80px;
         width: 80px;
         margin-bottom: 10px;
     }
+}
 
-    .toolbar .nav-links {
-        display: flex;
-        flex-direction: row; /* fixed */
-        gap: 10px;
+@media (max-width: 768px) {
+    .Rbody {
+        flex-direction: column;
+        background-color: #333;
     }
 
-    .toolbar .nav-links a {
-        margin: 0;
-        padding: 15px;
+    .PLColumn,
+    .PInfo {
         width: 100%;
-        text-align: right;
+    }
+
+    .PInternship {
+        padding: 20px;
+        margin: 20px auto;
     }
 
     .footer {
+        justify-content: center;
         flex-direction: column;
         gap: 10px;
+    }
+
+    .footer a i {
+        font-size: 30px;
+    }
+
+    .toolbar .nav-links {
+        width: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .toolbar .nav-links a {
+        padding: 15px;
+        text-align: right;
+    }
+
+    .nav-links a i,
+    .footer a i {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        width: 100%;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
-    .HColumn h1 {
-        font-size: 1.5em;
-    }
-
-    .HColumn p {
+    a {
         font-size: 0.9em;
-    }
-
-    .footer a {
-        font-size: 1.2em;
+        padding: 6px 14px;
+        letter-spacing: 0.05em;
     }
 
     .toolbar img {
@@ -321,5 +268,14 @@ a:hover {
 
     .toolbar .nav-links a {
         font-size: 0.9em;
+    }
+
+    .nav-links a i,
+    .footer a i {
+        font-size: 1rem;
+    }
+
+    .footer a {
+        font-size: 1.2em;
     }
 }
