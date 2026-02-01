@@ -81,8 +81,8 @@ body {
 
 .PLColumn {
     flex: 0 1 320px;     /* increase flex-basis from 260px to 320px */
-    max-width: 350px;    /* allow it to grow a bit more if space allows */
-    min-width: 260px;    /* keep a reasonable minimum */
+    max-width: 25%;    /* allow it to grow a bit more if space allows */
+    min-width: 160px;    /* keep a reasonable minimum */
     padding: 10px;
     background-color: #cccccc;
     display: flex;
