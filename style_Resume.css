@@ -16,17 +16,19 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-
-
 /* /////////////////////////////////  HEADER INFO   ///////////////////////////////////////////////// */
+
 .toolbar {
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
     background: linear-gradient(to right, #425453, #9df5f0);
+    color: #000;
     font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     padding: 0 20px;
 }
 
@@ -213,10 +215,9 @@ body {
         gap: 10px;
     }
 
-    /* /////////////////////////////////  INPUT INFO   ///////////////////////////////////////////////// */
+   /* /////////////////////////////////  INPUT INFO   ///////////////////////////////////////////////// */
 
 /* Glowing buttons */
-
 a {
     position: relative;
     background: #fff;
@@ -232,11 +233,11 @@ a {
     transition: 0.5s;
 }
 
-    a:hover {
-        background: var(--clr);
-        box-shadow: 0 0 35px var(--clr);
-        letter-spacing: 0.25em;
-    }
+a:hover {
+    background: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+    letter-spacing: 0.25em;
+}
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
@@ -266,16 +267,14 @@ a {
         padding-right: 0;
     }
 
-        .HColumn h1 {
-            font-size: 2em;
-        }
+    .HColumn h1 {
+        font-size: 2em;
+    }
 
-        .HColumn p {
-            font-size: 1em;
-            padding-right: 0;
-        }
-
-
+    .HColumn p {
+        font-size: 1em;
+        padding-right: 0;
+    }
 
     .toolbar img {
         height: 80px;
@@ -284,16 +283,17 @@ a {
     }
 
     .toolbar .nav-links {
-        flex-direction: center;
+        display: flex;
+        flex-direction: row; /* fixed */
         gap: 10px;
     }
 
-        .toolbar .nav-links a {
-            margin: 0;
-            padding: 15px 15px;
-            width: 100%;
-            text-align: right;
-        }
+    .toolbar .nav-links a {
+        margin: 0;
+        padding: 15px;
+        width: 100%;
+        text-align: right;
+    }
 
     .footer {
         flex-direction: column;
@@ -323,4 +323,3 @@ a {
         font-size: 0.9em;
     }
 }
-
