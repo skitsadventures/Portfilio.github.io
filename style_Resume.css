@@ -10,6 +10,9 @@ body {
     height: 100%;
     font-family: Arial, sans-serif;
     width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body {
@@ -66,23 +69,26 @@ body {
 
 .Rbody {
     display: flex;
+    flex-wrap: nowrap; /* or wrap if you want it to stack on smaller screens */
     justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+    align-items: stretch; /* let children stretch vertically */
     width: 100%;
-    min-height: 100vh;
+    height: auto; /* grow naturally */
     background: linear-gradient(140deg, #abdeff, #c8c8c8);
 }
 
 .PLColumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20%;
-    margin: 0;
+    flex: 0 1 320px;     /* increase flex-basis from 260px to 320px */
+    max-width: 350px;    /* allow it to grow a bit more if space allows */
+    min-width: 260px;    /* keep a reasonable minimum */
     padding: 10px;
     background-color: #cccccc;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
+
+
 
 .PLImageBorder {
     background-color: #028f75;
@@ -102,14 +108,19 @@ body {
     object-fit: contain;
 }
 
+
 .PInfo {
-    width: 75%;
+    flex: 1 1 auto; /* takes remaining space and grows */
+    width: auto; /* reset width */
     padding: 10px;
 }
 
 .PHeading {
     font-weight: bold;
     font-size: 2em;
+    /* Allow long words to break and wrap */
+    overflow-wrap: break-word;  /* Preferred modern property */
+    word-break: break-word;     /* Legacy support for some browsers */
 }
 
 .PGreyHeading {
@@ -195,13 +206,17 @@ a:hover {
 
 @media (max-width: 768px) {
     .Rbody {
-        flex-direction: column;
+        flex-direction: Row;
+        align-items: fit;
         background-color: #333;
     }
 
     .PLColumn,
     .PInfo {
-        width: 100%;
+    flex: 1 1 45%; /* or other width, for two columns side-by-side */
+    margin: 10px;
+    height: auto; /* grow with content */
+    box-sizing: border-box;
     }
 
     .PInternship {
