@@ -36,7 +36,6 @@ body {
     top: 0;
     z-index: 1000;
     padding: 0 20px;
-        padding-bottom: 10px;
 }
 
 .HeaderColumn {
@@ -58,6 +57,7 @@ body {
 .toolbar .nav-links {
     display: flex;
     gap: 10px;
+    padding-bottom: 10px;
 }
 
 .toolbar .nav-links a {
