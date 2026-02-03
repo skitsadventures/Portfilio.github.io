@@ -25,6 +25,13 @@ body {
     padding-left: 3%;
 }
 
+.HR {
+    border: none; /* remove default */
+    border-top: 2px solid #000; /* thickness + black color */
+    margin: 1em 0; /* optional spacing */
+    width: 95%;
+}
+
 
 /* /////////////////////////////////  HEADER INFO   ///////////////////////////////////////////////// */
 
@@ -50,6 +57,7 @@ body {
 
 .HeaderImage {
     margin: 6px;
+    align-items: center;
 }
 
 .toolbar img {
@@ -96,8 +104,8 @@ body {
 
 .PLImageBorder {
     background-color: #028f75;
-    margin-top: 2em;
-    width: 50%;
+    margin: 2em auto;
+    width: 70%;
     border-radius: 1em;
     display: flex;
     justify-content: center;
@@ -106,10 +114,11 @@ body {
 }
 
 .PLImage {
-    width: 100%;
+    width: 90%;
     height: auto;
+    object-fit: cover;
+    display: block;
     border-radius: 1em;
-    object-fit: contain;
 }
 
 
@@ -121,7 +130,7 @@ body {
 
 .PHeading {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.3em;
     /* Allow long words to break and wrap */
     overflow-wrap: break-word;  /* Preferred modern property */
     word-break: break-word;     /* Legacy support for some browsers */
