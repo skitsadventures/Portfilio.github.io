@@ -66,12 +66,24 @@ indexColumn {
             width: auto !important;
             padding: 5px 10px;
         }
-}
 
-.footer .spacer {
+    .footer .spacer {
     display: none;
-}
+    }
 
+    .toolbar .nav-links {
+        width: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+        .toolbar .nav-links a {
+            padding: 15px;
+            text-align: right;
+        }
 }
 
 
@@ -383,11 +395,16 @@ a {
         font-size: 1.2em;
     }
 
+    a {
+        font-size: 0.9em;
+        padding: 6px 14px;
+        letter-spacing: 0.05em;
+    }
+
     .toolbar img {
         height: 60px;
         width: 60px;
     }
-
     .toolbar .nav-links a {
         font-size: 0.9em;
     }
@@ -640,8 +657,6 @@ a {
 @media (max-width: 600px) {
     .toolbar {
         flex-direction: column;
-        height: auto;
-        padding: 10px;
     }
 
         .toolbar img {
@@ -650,17 +665,14 @@ a {
             margin-bottom: 10px;
         }
 
-        .toolbar .nav-links {
-            flex-direction: row;
-            gap: 10px;
-            width: 100%;
-        }
+    .nav-links {
+        width: 100%;
+    }
 
-            .toolbar .nav-links a {
-                padding: 10px;
-                text-align: center;
-                width: 100%;
-            }
+        .nav-links a {
+            width: 100%;
+            text-align: center;
+        }
 
     .AImageSections {
         padding: 10px;
