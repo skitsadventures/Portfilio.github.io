@@ -583,73 +583,59 @@ a {
 
 @media (max-width: 768px) {
     .Rbody {
-        justify-content: flex-start; /* Ensure they align at the start on small screens */
+        flex-direction: row;
+        align-items: fit;
+        background-color: #333;
     }
 
-    .PLColumn, .PInfo {
-        width: auto; /* Allow both columns to adjust based on content */
-    }
-
+    .PLColumn,
     .PInfo {
-        margin-top: 10px; /* Add top margin for spacing between elements */
+        flex: 1 1 45%;
+        margin: 10px;
+        height: auto;
+        box-sizing: border-box;
     }
-
-    .PLImageBorder {
-        background-color: #028f75;
-        text-align: center;
-        margin-top: 2em;
-        height: 16em;
-        width: 8em;
-        border-radius: 1em;
-        display: flex; /* Flexbox for centering image inside */
-        justify-content: center; /* Horizontally center image */
-        align-items: center; /* Vertically center image */
-    }
-
-    .PLImage {
-        margin-top: 0em;
-        height: 15em;
-        border: dimgrey;
-        border-radius: 1em;
-    }
-
-    .PContent {
-        font-size: 0.9rem; /* Slightly reduce font size for smaller screens */
-
-        max-width: 100%; /* Ensure the content takes full width on small screens */
-    }
-
-        .PContent p {
-            margin-bottom: 1rem;
-            font-size: 1.2em;
-        }
-
-        .PContent li {
-            margin-bottom: 0.5rem;
-            font-size: 1em;
-        }
-
 
     .PInternship {
-        min-height: 100vh; /* Ensure full height on mobile */
-        padding: 0px; /* Adjust padding for smaller screens */
+        padding: 20px;
+        margin: 20px auto;
     }
 
-    .PHeading {
-        font-size: 1.2rem; /* Slightly reduce font size for smaller screens */
+    .footer {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .PGreyHeading {
-        font-weight: bold;
-        text-align: left;
-        margin: 10%;
+        .footer a i {
+            font-size: 30px;
+        }
+
+    .toolbar .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+        flex-direction: row;
+
     }
 
-    .UL {
-        padding-left: 10%;
-        font-size: .5em;
+
+        .toolbar .nav-links a {
+            /* Give links a fixed width or allow shrink */
+            padding: 15px;
+            text-align: center; /* or right */
+            flex: 0 0 auto; /* prevents links from stretching */
+            white-space: nowrap; /* prevents text wrap */
+            width: fit-content; /* or a fixed width */
+        }
+
+    .nav-links a i,
+    .footer a i {
+        font-size: 1.2rem;
     }
 }
+
 
 /* ////////////////////////////// MOBILE DEVICE ////////////////////////////// */
 
