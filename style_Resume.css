@@ -70,14 +70,19 @@ body {
     display: flex;
     gap: 10px;
     padding-bottom: 10px;
+    align-items: center;
 }
 
-.toolbar .nav-links a {
-    margin: 0;
-    padding: 15px 15px;
-    width: auto;
-    text-align: right;
-}
+    .toolbar .nav-links a {
+        display: flex;
+        align-items: center; /* vertical centering */
+        justify-content: center; /* horizontal centering (optional) */
+        margin: 0;
+        padding: 15px 15px;
+        width: auto;
+        text-align: right;
+    }
+
 
 /* /////////////////////////////////   Resume INFO   ///////////////////////////////////////////////// */
 
