@@ -39,6 +39,7 @@ indexColumn {
 .HeaderColumn {
     display: flex;
     background-color: #424242;
+    padding-bottom: 10px;
 }
 
 .HeaderImage {
@@ -78,6 +79,7 @@ indexColumn {
         gap: 6px;
         justify-content: center;
         flex-direction: row;
+        padding-bottom: 10px;
     }
 
         .toolbar .nav-links a {
