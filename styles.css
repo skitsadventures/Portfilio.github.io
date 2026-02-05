@@ -44,6 +44,7 @@ indexColumn {
 
 .HeaderImage {
     margin: 6px;
+    align-items: center;
 }
 
 .toolbar img {
