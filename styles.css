@@ -469,6 +469,15 @@ a {
         z-index: 1;
     }
 
+    /*/////// Green line between images ///////////*/
+
+.GreenLine {
+    border: 1px solid #00ff40;
+    width: 80%;
+    margin: 20px auto;
+}
+
+
 @property --a {
     syntax: '<angle>';
     inherits: false;
