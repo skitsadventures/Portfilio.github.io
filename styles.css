@@ -453,8 +453,9 @@ a {
 
     .box img {
         display: block;
-        max-width: 30vw; 
-        width: auto;
+        max-width: 30vw;
+        min-width: 30vw;
+        /*width: auto;*/
         height: auto;
         z-index: 1;
     }
@@ -682,6 +683,7 @@ a {
         .box img {
             display: block;
             max-width: 40vw;
+            min-width: 40vw;
             width: auto;
             height: auto;
             z-index: 1;
