@@ -418,6 +418,8 @@ a {
 .AImageSections {
     background: linear-gradient(to right, #011816, #02a59d);
     display: flex;
+    /*justify-content: center;*/
+    align-items: flex-start;
 }
 
 .About {
@@ -431,27 +433,30 @@ a {
 .AImageInfo {
     margin-left: 2%;
     font-size: 2em;
+    width: 100%;
+    height: auto;
 }
 
-.box img {
-    max-width: 100%;
-    max-height: 100%;
-    z-index: 1;
-}
 
 .box {
-    display: flex;
+    display: inline-flex;
+    padding: 10px;
+    position: relative;
     justify-content: center;
     align-items: center;
-    align-content: center;
     margin-left: 6%;
     margin-top: 8px;
-    position: relative;
-    width: 400px;
-    height: 340px;
-    background: repeating-conic-gradient(from var(--a), #92def2 0%, #92def2 5%, transparent 5%, transparent 20%, #92def2 50%);
+    background: repeating-conic-gradient( from var(--a), #92def2 0%, #92def2 5%, transparent 5%, transparent 20%, #92def2 50% );
     animation: animate 4s linear infinite;
 }
+
+    .box img {
+        display: block;
+        max-width: 50vw; 
+        width: auto;
+        height: auto;
+        z-index: 1;
+    }
 
 @property --a {
     syntax: '<angle>';
