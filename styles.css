@@ -8,6 +8,7 @@
 html,
 body {
     height: 100%;
+    width: 100%;
     font-family: Arial, sans-serif;
 }
 
@@ -672,11 +673,12 @@ a {
 
     .AImageSections {
         padding: 0px;
+        overflow-x: hidden;
     }
 
     .box {
-        width: fit-content; /* shrink-wrap to image */
-        max-width: 80%; /* optional: cap width if needed */
+        width: fit-content; /* shrink-wrap image */
+        max-width: 50vw;
         height: auto;
     }
 
