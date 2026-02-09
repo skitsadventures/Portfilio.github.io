@@ -432,25 +432,33 @@ a {
 }
 
 .AImageInfo {
-    margin-left: 2%;
+    
     font-size: 2em;
     width: 100%;
     height: auto;
+    color: #ffffff;
 }
 
-
-.box {
-    display: inline-flex;
-    width: fit-content;
-    padding: 10px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin-left: 6%;
-    margin-top: 8px;
-    background: repeating-conic-gradient( from var(--a), #92def2 0%, #92def2 5%, transparent 5%, transparent 20%, #92def2 50% );
-    animation: animate 4s linear infinite;
+.AImageDesc {
+    padding-left: 2%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 1em;
 }
+
+    .box {
+        display: inline-flex;
+        width: fit-content;
+        padding: 10px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        margin-left: 6%;
+        margin-top: 8px;
+        background: repeating-conic-gradient( from var(--a), #92def2 0%, #92def2 5%, transparent 5%, transparent 20%, #92def2 50% );
+        animation: animate 4s linear infinite;
+    }
 
     .box img {
         display: block;
@@ -676,7 +684,15 @@ a {
         overflow-x: hidden;
     }
 
-    .box {
+    .AImageInfo {
+        padding-left: 8%;
+    }
+        
+    .AImageDesc {
+        padding-left: 8%;
+    }
+
+        .box {
         width: fit-content; /* shrink-wrap image */
         max-width: 50vw;
         height: auto;
