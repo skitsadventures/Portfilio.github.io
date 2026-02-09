@@ -469,6 +469,16 @@ a {
         z-index: 1;
     }
 
+.AIList {
+    padding-left: 2%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #ffffff;
+    list-style-position: inside;
+}
+
+
     /*/////// Green line between images ///////////*/
 
 .GreenLine {
@@ -701,6 +711,7 @@ a {
         padding-left: 8%;
     }
 
+    
         .box {
         width: fit-content; /* shrink-wrap image */
         max-width: 50vw;
@@ -716,6 +727,10 @@ a {
             z-index: 1;
         }
 
+    .AIList {
+        padding-left: 8%;
+        list-style-position: inside;
+    }
 
     .carousel-track img {
         width: 90%;
