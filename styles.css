@@ -699,8 +699,16 @@ a {
         }
 
     .AImageSections {
-        padding: 0px;
-        overflow-x: hidden;
+        display: flex;
+        flex-direction: column; /* stack vertically */
+        justify-content: center; /* center vertically */
+        align-items: center; /* center horizontally */
+    }
+
+
+    .HeaderImage {
+        margin: 0px;
+
     }
 
     .AImageInfo {
