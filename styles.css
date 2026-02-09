@@ -729,6 +729,10 @@ a {
 
     .AIList {
         padding-left: 8%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 1em;
+        color: #ffffff;
         list-style-position: inside;
     }
 
