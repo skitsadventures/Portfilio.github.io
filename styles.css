@@ -440,6 +440,7 @@ a {
 
 .box {
     display: inline-flex;
+    width: fit-content;
     padding: 10px;
     position: relative;
     justify-content: center;
@@ -452,7 +453,7 @@ a {
 
     .box img {
         display: block;
-        max-width: 50vw; 
+        max-width: 30vw; 
         width: auto;
         height: auto;
         z-index: 1;
@@ -669,14 +670,23 @@ a {
         }
 
     .AImageSections {
-        padding: 10px;
+        padding: 0px;
     }
 
     .box {
-        width: 80%;
-        max-width: 400px;
+        width: fit-content; /* shrink-wrap to image */
+        max-width: 80%; /* optional: cap width if needed */
         height: auto;
     }
+
+        .box img {
+            display: block;
+            max-width: 40vw;
+            width: auto;
+            height: auto;
+            z-index: 1;
+        }
+
 
     .carousel-track img {
         width: 90%;
