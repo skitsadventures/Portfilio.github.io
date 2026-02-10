@@ -22,6 +22,42 @@ indexColumn {
     display: flex;
     flex-direction: column;
 }
+
+/* /////////////////////////////////  BOX EXPANDED   ///////////////////////////////////////////////// */
+
+.expandable-image {
+    width: 95%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#imageModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    cursor: pointer;
+}
+
+    #imageModal img {
+        max-width: 70vw; /* reduce size a bit to account for padding */
+        max-height: 70vh;
+        width: auto;
+        height: auto;
+        object-fit: contain; /* keeps aspect ratio */
+        /*padding: 10vw;*/ /* adds the desired padding */
+        border: 5px solid #92def2; /* border with your color */
+        border-radius: 8px; /* optional rounded corners */
+        box-sizing: border-box; /* ensures padding is inside max-width/max-height */
+    }
+
 /* /////////////////////////////////  HEADER INFO   ///////////////////////////////////////////////// */
 .toolbar {
     display: flex;
@@ -447,18 +483,21 @@ a {
     font-size: 1em;
 }
 
-    .box {
-        display: inline-flex;
-        width: fit-content;
-        padding: 10px;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        margin-left: 6%;
-        margin-top: 8px;
-        background: repeating-conic-gradient( from var(--a), #92def2 0%, #92def2 5%, transparent 5%, transparent 20%, #92def2 50% );
-        animation: animate 4s linear infinite;
-    }
+.box {
+    display: flex; /* change here */
+    width: fit-content;
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6%;
+    margin-top: 8px;
+    background: repeating-conic-gradient(from var(--a), #92def2 0%, #92def2 5%, transparent 5%, transparent 20%, #92def2 50%);
+    animation: animate 4s linear infinite;
+    font-size: 0;
+    transition: all 0.3s ease;
+}
+
 
     .box img {
         display: block;
