@@ -3,162 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="styles.css" rel="stylesheet">
     <title>MessyGames Work</title>
-    <style>
-        /* ----------------- Modal / Lightbox ----------------- */
-        #imageModal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
-            display: none; /* hidden by default */
-            justify-content: center;
-            align-items: center;
-            z-index: 10000;
-            cursor: pointer;
-        }
-
-            #imageModal img {
-                max-width: 90vw;
-                max-height: 90vh;
-                width: auto;
-                height: auto;
-                object-fit: contain;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-                border-radius: 4px;
-            }
-
-        /* ----------------- Make images clickable ----------------- */
-        .expandable-image {
-            width: 95%;
-            height: auto;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-    </style>
 </head>
 <body>
-
     <div style="height: 0.7em; background-color: #424242;"></div>
 
     <!-- Header -->
-    <div class="HeaderColumn">
-        <div class="toolbar">
-            <div class="HeaderImage">
-                <img src="assets/Logo2.jpg" alt="Profile Image" width="40">
-            </div>
-            <div class="spacer"></div>
-            <div class="nav-links">
-                <a href="index.html" style="--clr:#00f451;">Home</a>
-                <a href="about.html" style="--clr:#ff00f7;">Blender</a>
-                <a href="Game.html" style="--clr:#fcff00;">Games</a>
-                <a href="resume.html" style="--clr:#ff6a00;">Resume</a>
-            </div>
-        </div>
-    </div>
+    <html lang="en">
 
-    <div id="container">
-        <div class="content">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <title>MessyGames Work</title>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div>
             <div style="height: 0.7em; background-color: #424242;"></div>
-            <div class="About">
-                <b style="font-size: 30px; color: #ffffff; font-size: 1em; text-align: center;">These are my current Blender artworks.</b>
-                <hr style="border: 1px solid #00ff40; width: 80%; margin: 20px auto;">
-            </div>
-
-            <!-- Image sections -->
-            <div class="AImageSections">
-                <div class="box">
-                    <img src="assets/favicon.ico" class="expandable-image" alt="Mushroom">
-                </div>
-                <div>
-                    <h1 class="AImageInfo" style=" color: #ffffff;">Mushroom</h1>
-                    <h2 class="AImageDesc">This project was one of my favorites. Learned emission, geometry nodes, particles, and animation refinement.</h2>
-                </div>
-            </div>
-
-            <div class="About"><hr class="GreenLine"></div>
-
-            <div class="AImageSections">
-                <div class="box">
-                    <img src="assets/oceanGif.gif" class="expandable-image" alt="Ocean">
-                </div>
-                <div>
-                    <h1 class="AImageInfo" style=" color: #ffffff;">Ocean</h1>
-                    <h2 class="AImageDesc">
-                        Learned snapping, particle emission, fog, and rendering options.
-                    </h2>
-                </div>
-            </div>
-
-            <div class="About"><hr class="GreenLine"></div>
-
-            <div class="AImageSections">
-                <div class="box">
-                    <img src="assets/untitled.jpeg" class="expandable-image" alt="Building Complex">
-                </div>
-                <div>
-                    <h1 class="AImageInfo" style=" color: #ffffff;">Building Complex</h1>
-                    <h2 class="AImageDesc">Learned performance lessons with high vertex counts.</h2>
-                </div>
-            </div>
-
-            <div class="About"><hr class="GreenLine"></div>
-
-            <div class="AImageSections">
-                <div class="box">
-                    <img src="assets/sunset.jpeg" class="expandable-image" alt="Sunset">
-                </div>
-                <div>
-                    <h1 class="AImageInfo" style=" color: #ffffff;">Sunset</h1>
-                    <h2 class="AImageDesc">Low-poly scene with noise textures and animation.</h2>
-                </div>
-            </div>
-
-            <div class="About"><hr class="GreenLine"></div>
-
-            <div class="AImageSections">
-                <div class="box">
-                    <img src="assets/portal.jpg" class="expandable-image" alt="Portal">
-                </div>
-                <div>
-                    <h1 class="AImageInfo" style=" color: #ffffff;">Portal</h1>
-                    <h2 class="AImageDesc">Focused on experimentation and visual appeal.</h2>
-                </div>
-            </div>
-
-            <div class="About"><hr class="GreenLine"></div>
-
-            <div class="AImageSections">
-                <div class="box">
-                    <img src="assets/ViralTank.png" class="expandable-image" alt="Viral Tank">
-                </div>
-                <div>
-                    <h1 class="AImageInfo" style=" color: #ffffff;">Viral Tank</h1>
-                    <h2 class="AImageDesc">Conceptual design for a three-person walking combat vehicle.</h2>
-                </div>
-            </div>
-
         </div>
 
-        <!-- Footer Section -->
-        <div class="footer">
-            <div class="spacer"></div>
-            <a href="https://www.linkedin.com/in/mack-rubidge-a09948229/" style="--clr:#fff;"><i class="fa-brands fa-linkedin" style="color: black;"></i></a>
-            <a href="https://github.com/skitsadventures" style="--clr:#fff;"><i class="fa-brands fa-github" style="color: black;"></i></a>
-            <a href="mailto:mackrubidge@gmail.com" style="--clr:#fff;"><i class="fa-solid fa-paper-plane" style="color: black;"></i></a>
-            <a href="#" style="--clr:#fff;"><i class="fa-brands fa-google" style="color: black;"></i></a>
+        <!-- Header -->
+        <div class="HeaderColumn">
+            <div class="toolbar">
+                <div class="HeaderImage">
+                    <img src="assets/Logo2.jpg" alt="Profile Image" width="40">
+                </div>
+                <div class="spacer"></div>
+                <div class="nav-links">
+                    <a href="index.html" style="--clr:#00f451;">Home</a>
+                    <a href="about.html" style="--clr:#ff00f7;">Blender</a>
+                    <a href="Game.html" style="--clr:#fcff00;">Games</a>
+                    <a href="resume.html" style="--clr:#ff6a00;">Resume</a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- ----------------- Modal / Lightbox ----------------- -->
-    <div id="imageModal">
-        <img id="modalImg" src="" alt="Expanded Image">
-    </div>
+        <div id="container">
+            <div class="content">
+                <div style="height: 0.7em; background-color: #424242;"></div>
+                <div class="About">
+                    <b style="font-size: 30px; color: #ffffff; font-size: 1em; text-align: center;">These are my current Blender artworks.</b>
+                    <hr style="border: 1px solid #00ff40; width: 80%; margin: 20px auto;">
+                </div>
 
-    <script src="script.js"></script>
+                <!-- This is where the images with the borders are contained -->
+                <div class="AImageSections">
+                    <div class="box">
+                        <img src="assets/favicon.ico" style="height: 95%; width: 95%;" class="expandable-image">
+                    </div>
+                    <div>
+                        <h1 class="AImageInfo" style=" color: #ffffff;">Mushroom</h1>
+                        <h2 class="AImageDesc">This project was one of my favorites. Through it, I learned the fundamentals of emission and geometry nodes, as well as basic particle usage and animation refinement.</h2>
+                    </div>
+                </div>
+
+                <div class="About">
+                    <hr class="GreenLine">
+                </div>
+
+                <div class="AImageSections">
+                    <div class="box">
+                        <img src="assets/oceanGif.gif" style="height: 95%; width: 95%;" class="expandable-image">
+                    </div>
+                    <div>
+                        <h1 class="AImageInfo" style=" color: #ffffff;">Ocean</h1>
+                        <h2 class="AImageDesc">
+                            This project helped me gain a stronger understanding of snapping and how it can be applied across multiple tools, even during animation.<br>
+                            Additional topics included particle emission, fog creation, and an exploration of Blender’s various render options.
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="About">
+                    <hr class="GreenLine">
+                </div>
+
+                <div class="AImageSections">
+                    <div class="box">
+                        <img src="assets/untitled.jpeg" style="height: 95%; width: 95%;" class="expandable-image">
+                    </div>
+                    <div>
+                        <h1 class="AImageInfo" style=" color: #ffffff;">Building Complex</h1>
+                        <h2 class="AImageDesc">This was one of my earliest projects outside of the common Blender Guru donut tutorial. It taught me an important lesson regarding performance issues caused by excessive vertex counts.</h2>
+                    </div>
+                </div>
+
+                <div class="About">
+                    <hr class="GreenLine">
+                </div>
+
+                <div class="AImageSections">
+                    <div class="box">
+                        <img src="assets/sunset.jpeg" style="height: 95%; width: 95%;" class="expandable-image">
+                    </div>
+                    <div>
+                        <h1 class="AImageInfo" style=" color: #ffffff;">Sunset</h1>
+                        <h2 class="AImageDesc">This project focused on creating a low-poly scene. While simple in scope, it provided valuable insight into noise textures and animating their parameters.</h2>
+                    </div>
+                </div>
+
+                <div class="About">
+                    <hr class="GreenLine">
+                </div>
+
+                <div class="AImageSections">
+                    <div class="box">
+                        <img src="assets/portal.jpg" style="height: 95%; width: 95%;" class="expandable-image">
+                    </div>
+                    <div>
+                        <h1 class="AImageInfo" style=" color: #ffffff;">Portal</h1>
+                        <h2 style="padding-left: 20px; margin-top: 5px; margin-bottom: 5px; font-size: 1em; color: #ffffff;">This project is one of my favorites visually, although it was more focused on experimentation than learning new techniques.</h2>
+                    </div>
+                </div>
+
+                <div class="About">
+                    <hr class="GreenLine">
+                </div>
+
+                <div class="AImageSections">
+                    <div class="box">
+                        <img src="assets/ViralTank.png" style="height: 95%; width: 95%;" class="expandable-image">
+                    </div>
+                    <div>
+                        <h1 class="AImageInfo" style=" color: #ffffff;">Viral Tank</h1>
+                        <h2 class="AImageDesc">This project is a conceptual design for a three-person, walking combat vehicle.</h2>
+                    </div>
+                </div>
+
+                <div class="About">
+                    <hr class="GreenLine">
+                </div>
+
+                <div style="height: 2em; background-color: #424242;"></div>
+
+                <!-- Image Modal -->
+                <div id="imageModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:1000;">
+                    <span id="closeModal" style="position:absolute; top:20px; right:30px; font-size:40px; color:white; cursor:pointer;">&times;</span>
+                    <img id="modalImg" src="" style="max-width:90%; max-height:90%;">
+                </div>
+
+                <!-- Footer Section -->
+                <div class="footer">
+                    <div class="spacer"></div>
+                    <a href="https://www.linkedin.com/in/mack-rubidge-a09948229/" style="--clr:#fff;"><i class="fa-brands fa-linkedin" style="color: black;"></i></a>
+                    <a href="https://github.com/skitsadventures" style="--clr:#fff;"><i class="fa-brands fa-github" style="color: black;"></i></a>
+                    <a href="mailto:mackrubidge@gmail.com" style="--clr:#fff;"><i class="fa-solid fa-paper-plane" style="color: black;"></i></a>
+                    <a href="#" style="--clr:#fff;"><i class="fa-brands fa-google" style="color: black;"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
+
 </body>
 </html>
