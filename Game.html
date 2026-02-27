@@ -9,6 +9,28 @@
 
     <link href="styles.css" rel="stylesheet">
 </head>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  appId: "YOUR_APP_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+onAuthStateChanged(auth, (user) => {
+
+  if (!user) {
+    window.location.href = "login.html";
+  }
+
+});
+</script>
 <body>
     <div>
         <div style="height: 0.7em; background-color: #424242;"></div>
@@ -26,6 +48,7 @@
                 <a href="about.html" style="--clr:#ff00f7;">Blender</a>
                 <a href="Game.html" style="--clr:#fcff00;">Games</a>
                 <a href="resume.html" style="--clr:#ff6a00;">Resume</a>
+                <a href="Login.html" style="--clr:#ff6a00;">Login</a>
             </div>
         </div>
     </div>
