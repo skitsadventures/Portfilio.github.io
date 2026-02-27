@@ -9,32 +9,7 @@
 
     <link href="styles.css" rel="stylesheet">
 </head>
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBY1fp3MVIubdekbiEiJtCSlJd8_BWE-0s",
-  authDomain: "messygamesauth.firebaseapp.com",
-  projectId: "messygamesauth",
-  storageBucket: "messygamesauth.firebasestorage.app",
-  messagingSenderId: "150152569640",
-  appId: "1:150152569640:web:9d0ae2a93fe0384f8ae61d",
-  measurementId: "G-TWDWWF5TBW"
-};
-
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-onAuthStateChanged(auth, (user) => {
-
-  if (!user) {
-    window.location.href = "login.html";
-  }
-
-});
-</script>
 <body>
     <div>
         <div style="height: 0.7em; background-color: #424242;"></div>
