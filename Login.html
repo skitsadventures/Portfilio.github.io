@@ -5,46 +5,30 @@
 </head>
 <body>
 
-<?php
-// Start session if needed (optional for login later)
-session_start();
+<h2>MessyGames Registration Form</h2>
 
-// CSV file path
-$csv_dir = 'data';
-$csv_file = $csv_dir . '/users.csv';
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSfMWQnRH37EE8dBet88dSUcRYOLuGMESm5Ql9TuRcixwqH4GA/formResponse" method="POST" target="_blank">
 
-// Create data folder if it doesn't exist
-if (!file_exists($csv_dir)) {
-    mkdir($csv_dir, 0777, true);
-}
+  <label for="fname">First name *</label><br>
+  <input type="text" id="fname" name="entry.1831546356" required><br><br>
 
-// Handle form submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $fname = $_POST['fname'] ?? '';
-    $lname = $_POST['lname'] ?? '';
+  <label for="lname">Surname *</label><br>
+  <input type="text" id="lname" name="entry.1256380103" required><br><br>
 
-    if ($fname && $lname) {
-        // Append new data to CSV
-        $fp = fopen($csv_file, 'a'); // 'a' = append
-        fputcsv($fp, [$fname, $lname, date('Y-m-d H:i:s')]);
-        fclose($fp);
+  <label for="email">Email Account *</label><br>
+  <input type="email" id="email" name="entry.870773433" required><br><br>
 
-        echo "<p style='color:green;'>Submitted successfully! CSV updated.</p>";
-    } else {
-        echo "<p style='color:red;'>Please enter both first and last name.</p>";
-    }
-}
-?>
+  <label for="age">Age</label><br>
+  <input type="number" id="age" name="entry.24418870"><br><br>
 
-<h1>Submit Your Info</h1>
+  <label for="region">Region</label><br>
+  <input type="text" id="region" name="entry.1986694352"><br><br>
 
-<form method="POST" action="">
-  <label for="fname">First name: </label>
-  <input type="text" id="fname" name="fname" required><br><br>
-  <label for="lname">Last name: </label>
-  <input type="text" id="lname" name="lname" required><br><br>
   <input type="submit" value="Submit">
-</form> 
+
+</form>
+
+<p>After submitting, a Google Form confirmation page will open in a new tab.</p>
 
 </body>
 </html>
