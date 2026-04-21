@@ -15,16 +15,66 @@
             background-color: #1e1e1e;
         }
 
-        video {
-            width: 100%;
-            max-width: 900px;
-            border-radius: 10px;
-        }
-
         .video-wrapper {
             width: 100%;
             display: flex;
             justify-content: center;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .video-thumb {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .video-container:hover .video-thumb {
+            opacity: 0.7;
+        }
+
+        /* Play button */
+        .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85px;
+    height: 85px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.play-button i {
+    font-size: 32px;
+    color: white;
+
+    /* REMOVE this line if you had it */
+    margin-left: 0;
+    line-height: 1;
+}
+
+        .video-container:hover .play-button {
+            background: rgba(0, 255, 64, 0.8);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        video {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -42,11 +92,11 @@
             </div>
             <div class="spacer"></div>
             <div class="nav-links">
-                <a href="index.html" style="--clr:#00f451;">Home</a>
-                <a href="about.html" style="--clr:#ff00f7;">Blender</a>
-                <a href="Game.html" style="--clr:#fcff00;">Games</a>
-                <a href="resume.html" style="--clr:#ff6a00;">Resume</a>
-                <a href="WebsiteTemplate.html" style="--clr:#AF00FF;">Website</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">Blender</a>
+                <a href="Game.html">Games</a>
+                <a href="resume.html">Resume</a>
+                <a href="WebsiteTemplate.html">Website</a>
             </div>
         </div>
     </div>
@@ -65,54 +115,79 @@
                 <hr style="border: 1px solid #00ff40; width: 80%; margin: 20px auto;">
             </div>
 
-            <!-- VIDEO 1 (uses your existing layout style) -->
+            <!-- VIDEO 1 -->
             <div class="AImageSections">
                 <div class="video-wrapper">
-                    <video controls autoplay muted loop>
-                        <source src="assets/Videos/WebTemp.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-container" data-video="assets/Videos/WebTemp.mp4">
+                        <img class="video-thumb" src="assets/WebTemp.png" alt="Video 1">
+
+                        <!-- Play Icon -->
+                        <div class="play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="About">
-                <hr class="GreenLine">
-            </div>
+            <div class="About"><hr class="GreenLine"></div>
 
             <!-- VIDEO 2 -->
             <div class="AImageSections">
                 <div class="video-wrapper">
-                    <video controls autoplay muted loop>
-                        <source src="assets/Videos/CompanyWebTemp.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-container" data-video="assets/Videos/CompanyWebTemp.mp4">
+                        <img class="video-thumb" src="assets/Construction.png" alt="Video 2">
+
+                        <!-- Play Icon -->
+                        <div class="play-button">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="About">
-                <hr class="GreenLine">
-            </div>
+            <div class="About"><hr class="GreenLine"></div>
 
         </div>
 
         <!-- Footer -->
         <div class="footer">
             <div class="spacer"></div>
-            <a href="https://www.linkedin.com/in/mack-rubidge-a09948229/" style="--clr:#fff;">
+            <a href="https://www.linkedin.com/in/mack-rubidge-a09948229/">
                 <i class="fa-brands fa-linkedin" style="color: black;"></i>
             </a>
-            <a href="https://github.com/skitsadventures" style="--clr:#fff;">
+            <a href="https://github.com/skitsadventures">
                 <i class="fa-brands fa-github" style="color: black;"></i>
             </a>
-            <a href="mailto:mackrubidge@gmail.com" style="--clr:#fff;">
+            <a href="mailto:mackrubidge@gmail.com">
                 <i class="fa-solid fa-paper-plane" style="color: black;"></i>
-            </a>
-            <a href="#" style="--clr:#fff;">
-                <i class="fa-brands fa-google" style="color: black;"></i>
             </a>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- SCRIPT -->
+    <script>
+        document.querySelectorAll(".video-container").forEach(container => {
+            container.addEventListener("click", function () {
+
+                const videoSrc = this.getAttribute("data-video");
+
+                const video = document.createElement("video");
+                video.controls = true;
+                video.autoplay = true;
+                video.style.width = "100%";
+                video.style.maxWidth = "900px";
+                video.style.borderRadius = "10px";
+
+                const source = document.createElement("source");
+                source.src = videoSrc;
+                source.type = "video/mp4";
+
+                video.appendChild(source);
+
+                this.replaceWith(video);
+            });
+        });
+    </script>
 
 </body>
-
 </html>
