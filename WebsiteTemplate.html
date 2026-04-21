@@ -165,29 +165,87 @@
     </div>
 
     <!-- SCRIPT -->
-    <script>
-        document.querySelectorAll(".video-container").forEach(container => {
-            container.addEventListener("click", function () {
+<script>
+let activeContainer = null;
+let activeVideo = null;
 
-                const videoSrc = this.getAttribute("data-video");
+function restoreContainer(container) {
+    if (!container) return;
 
-                const video = document.createElement("video");
-                video.controls = true;
-                video.autoplay = true;
-                video.style.width = "100%";
-                video.style.maxWidth = "900px";
-                video.style.borderRadius = "10px";
+    // restore original thumbnail HTML
+    const thumbnailHTML = container.getAttribute("data-original");
 
-                const source = document.createElement("source");
-                source.src = videoSrc;
-                source.type = "video/mp4";
+    container.innerHTML = thumbnailHTML;
+    attachClick(container);
+}
 
-                video.appendChild(source);
+function attachClick(container) {
+    container.addEventListener("click", function handler() {
 
-                this.replaceWith(video);
-            });
+        const videoSrc = container.getAttribute("data-video");
+
+        // A + B: If another video is playing, stop + restore it
+        if (activeContainer && activeContainer !== container) {
+            if (activeVideo) {
+                activeVideo.pause();
+            }
+            restoreContainer(activeContainer);
+            activeContainer = null;
+            activeVideo = null;
+        }
+
+        // Save thumbnail before replacing
+        if (!container.getAttribute("data-original")) {
+            container.setAttribute("data-original", container.innerHTML);
+        }
+
+        // Create video
+        const video = document.createElement("video");
+        video.controls = true;
+        video.autoplay = true;
+        video.style.width = "100%";
+        video.style.maxWidth = "900px";
+        video.style.borderRadius = "10px";
+
+        const source = document.createElement("source");
+        source.src = videoSrc;
+        source.type = "video/mp4";
+
+        video.appendChild(source);
+
+        // Set active references
+        activeContainer = container;
+        activeVideo = video;
+
+        // C: When new video is clicked, it starts automatically (autoplay already set)
+
+        // Restore when video ends
+        video.addEventListener("ended", () => {
+            restoreContainer(container);
+            if (activeContainer === container) {
+                activeContainer = null;
+                activeVideo = null;
+            }
         });
-    </script>
+
+        // Click video → pause + restore thumbnail
+        video.addEventListener("click", () => {
+            video.pause();
+            restoreContainer(container);
+            if (activeContainer === container) {
+                activeContainer = null;
+                activeVideo = null;
+            }
+        });
+
+        container.innerHTML = "";
+        container.appendChild(video);
+    }, { once: true });
+}
+
+// initialize all containers
+document.querySelectorAll(".video-container").forEach(attachClick);
+</script>
 
 </body>
 </html>
